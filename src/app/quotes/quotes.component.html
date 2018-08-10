@@ -1,22 +1,32 @@
-<h1>Quotes</h1>
-<p>Welcome to the Quotes page where you can create a quote and get feedback on it.
-  People will give you feedback on whether the quote is inspirational or not.
-  You will then have the option to delete quotes that are not inspirational to viewers</p>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-4">
+          <h1>Quotes</h1>
+          <p>Welcome to the Quotes page where you can create a quote and get feedback on it.
+            People will give you feedback on whether the quote is inspirational or not.
+            You will then have the option to delete quotes that are not inspirational to viewers</p>
 
-<h2>Here are the registered quotes</h2>
-<ul>
-  <div *ngFor= 'let quote of quotes; let i=index'>
-    <li>Quote by: {{quote.author}}</li>
+          <h2>Here are the registered quotes</h2>
+          <ul>
+            <div *ngFor= 'let quote of quotes; let i=index'>
+              <li>Quote by: {{quote.author}}</li>
 
-    <button (click)='showQuoteDetails (i)'>Show Quote</button>
+              <button (click)='showQuoteDetails (i)'>Show Quote</button>
 
-    <!-- <app-quote-statement *ngIf="quote.showDetails" [quote]='quote'></app-quote-statement> -->
+              <!-- <app-quote-statement *ngIf="quote.showDetails" [quote]='quote'></app-quote-statement> -->
+            </div>
+          </ul>
+      </div>
+    </div>
   </div>
-  <div class="container">
+</div>
+
+
+<div class="container">
     <div class="row" id="quote-form">
       <div class="col-md-6">
           <app-quote-forms></app-quote-forms>
       </div>
     </div>
   </div>
-</ul>
