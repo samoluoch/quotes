@@ -12,7 +12,7 @@
             <div *ngFor= 'let quote of quotes; let i=index'>
               <li>Quote by: {{quote.author}}</li>
 
-              <button (click)='showQuoteDetails (i)'>Show Quote</button>
+              <button (click)='toggleDetails (i)'>Show Quote</button>
 
               <app-quote-statement *ngIf="quote.showDetails" [quote]='quote'></app-quote-statement>
             </div>

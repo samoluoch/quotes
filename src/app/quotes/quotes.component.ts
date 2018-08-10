@@ -13,8 +13,8 @@ export class QuotesComponent implements OnInit {
     new Quotes (1, 'Author2', 'This is yet another quote'),
   ];
 
-  showQuoteDetails(index){
-    this.quotes[index].showQuoteDetails = !this.showQuoteDetails;
+  toggleDetails(index){
+    this.quotes[index].showDetails = !this.showDetails;
   }
 
   constructor() { }
