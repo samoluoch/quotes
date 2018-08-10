@@ -6,7 +6,7 @@
 <h2>Here are the registered quotes</h2>
 <ul>
   <div *ngFor= 'let quote of quotes; let i=index'>
-    <li>Quote by: {{quote.name}}</li>
+    <li>Quote by: {{quote.author}}</li>
 
     <button (click)='showQuoteDetails (i)'>Show Quote</button>
 
