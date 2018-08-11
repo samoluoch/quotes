@@ -1,5 +1,5 @@
 #quoteInfo {
-  background-color: lightblue;
+  background-color: rgb(95, 179, 248);
   width: 100%;
   align-content: center;
   align-items: center;
@@ -10,5 +10,9 @@
 .clickVote {
   align-content: left;
   background-color: brown;
+  color: white;
+}
+.delete {
+  background-color: black;
   color: white;
 }
