@@ -16,3 +16,10 @@
   background-color: black;
   color: white;
 }
+#quotesPage {
+  width: 100%;
+}
+#quotesTitle {
+  text-align: center;
+  color: purple;
+}
