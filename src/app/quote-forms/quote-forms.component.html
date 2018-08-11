@@ -1,24 +1,23 @@
 <div class="container-fluid">
-  <div class="jumbotron">
-    <div class="row">
-      <form> <!--(ngSubmit)='submitQuote()' #quoteForm='ngForm'-->
-        <div class="form-group">
+  <div class="row" id="form-group">
+    <h1>Post a new Quote</h1>
+    <form> <!--(ngSubmit)='submitQuote()' #quoteForm='ngForm'-->
+      <div class="form-group">
 
-         <label for="author">Author</label>
-         <input type="text" required class="form-control" id="author">
+       <label for="author">Author</label>
+       <input type="text" required class="form-control" id="author">
 
-       </div>
-       <div class="form-group">
+      </div>
+      <div class="form-group">
 
-        <label for="quote">Enter the Quote Here</label>
-        <textarea class="form-control" id="quote" rows="4" required></textarea>
+       <label for="quote">Enter the Quote Here</label>
+       <textarea class="form-control" id="quote" rows="4" required></textarea>
 
-        <label for="postedBy">Posted By</label>
-        <input type="text" class="form-control" id="date" required>
+       <label for="postedBy">Posted By</label>
+       <input type="text" class="form-control" id="date" required>
 
-        </div>
-        <input onclick="submit();" type="submit" value="Submit">
-      </form>
-    </div>
+      </div>
+       <input onclick="submit();" type="submit" value="Submit">
+    </form>
   </div>
 </div>
