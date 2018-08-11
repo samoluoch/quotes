@@ -12,9 +12,22 @@
             <div *ngFor= 'let quote of quotes; let i=index'>
               <li>Quote by: {{quote.author}}</li>
 
-              <button (click)='toggleDetails (i)'>Show Quote</button>
+              <button (click)='toggleDetails (i)'>Show Quote Details</button>
 
               <app-quote-statement *ngIf="quote.showQuote" [quote]='quote'></app-quote-statement>
+
+              <div class="vote circle">
+                  <div>
+                      <button onclick="myFunction()">Upvote +</button>
+                  <div class="increment up"></div>
+                  </div>
+                  <div>
+                      <button onclick="myFunction()">Downvote -</button>
+                  <div class="increment down"></div>
+                  </div>
+
+                  <div class="count">8</div>
+                </div>
             </div>
           </ul>
       </div>
