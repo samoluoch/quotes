@@ -1,36 +1,34 @@
 <div class="container">
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-md-4">
-          <h1>Quotes</h1>
-          <p>Welcome to the Quotes page where you can create a quote and get feedback on it.
-            People will give you feedback on whether the quote is inspirational or not.
-            You will then have the option to delete quotes that are not inspirational to viewers</p>
+  <div class="row" id="quoteInfo">
+    <div class="col-md-8">
+        <h1>Quotes</h1>
+        <p>Welcome to the Quotes page where you can create a quote and get feedback on it.
+           People will give you feedback on whether the quote is inspirational or not.
+          You will then have the option to delete quotes that are not inspirational to viewers</p>
 
-          <h4>Here are the registered quotes</h4>
-          <ul>
-            <div *ngFor= 'let quote of quotes; let i=index'>
-              <li>Quote by: {{quote.author}}</li>
+        <h4>Here are the registered quotes</h4>
+        <ul>
+          <div *ngFor= 'let quote of quotes; let i=index'>
+            <li>Quote by: {{quote.author}}</li>
 
-              <button (click)='toggleDetails (i)'>Show Quote Details</button>
+            <button (click)='toggleDetails (i)'>Show Quote Details</button>
 
-              <app-quote-statement *ngIf="quote.showQuote" [quote]='quote'></app-quote-statement>
+            <app-quote-statement *ngIf="quote.showQuote" [quote]='quote'></app-quote-statement>
 
-              <div class="vote circle">
-                  <div>
-                      <button onclick="myFunction()">Upvote +</button>
-                  <div class="increment up"></div>
-                  </div>
-                  <div>
-                      <button onclick="myFunction()">Downvote -</button>
-                  <div class="increment down"></div>
-                  </div>
-
-                  <div class="count">8</div>
+            <div class="voting">
+                <div>
+                    <button class="clickVote" onclick="myFunction()">Upvote +</button>
+                <div class="increment up"></div>
                 </div>
+                <div>
+                    <button class="clickVote" onclick="myFunction()">Downvote -</button>
+                <div class="increment down"></div>
+                </div>
+
+                 <div class="count"><strong>8</strong></div>
             </div>
-          </ul>
-      </div>
+          </div>
+        </ul>
     </div>
   </div>
 </div>
@@ -38,7 +36,7 @@
 
 <div class="container">
     <div class="row" id="quote-form">
-      <div class="col-md-6">
+      <div class="col-md-8">
           <app-quote-forms (addQuote)="addNewQuote($event)"></app-quote-forms>
       </div>
     </div>

@@ -1,0 +1,17 @@
+#quoteInfo {
+  background-color: lightblue;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+}
+.clickVote {
+  align-content: left;
+  background-color: brown;
+  color: white;
+}
+#quote-form {
+  background-color: bisque;
+}
