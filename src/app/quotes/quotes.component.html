@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="titlePage">
   <div class="row" id="quotesPage">
     <div class="col-md-6" id="quoteInfo">
         <h1 id="quotesTitle">Quotes</h1>
@@ -9,24 +9,24 @@
           <div *ngFor= 'let quote of quotes; let i=index'>
             <li>Quote by: {{quote.author}}</li>
 
-            <button (click)='toggleDetails (i)'>Show Quote Details</button>
+            <button (click)='toggleDetails (i)'><strong>Show Quote Details</strong></button>
 
             <app-quote-statement *ngIf="quote.showQuote" [quote]='quote'></app-quote-statement>
 
             <div class="voting">
                 <div>
-                    <button class="clickVote" onclick="myFunction()"><strong>Upvote +</strong></button>
+                    <button class="clickVote" onclick="voteQuote()"><strong>Upvote +</strong></button>
                 <div class="increment up"></div>
                 </div>
                 <div>
-                    <button class="clickVote" onclick="myFunction()"><strong>Downvote -</strong></button>
+                    <button class="clickVote" onclick="voteQuote()"><strong>Downvote -</strong></button>
                 <div class="increment down"></div>
                 </div>
 
                  <div class="count"><strong>0</strong></div>
             </div>
             <div class="deleteQuot">
-                <button class="delete" onclick="deleteQuote()"><strong>Delete Quote</strong></button>
+                <button class="delete" onclick="deleteQuote(i)"><strong>Delete Quote</strong></button>
             </div>
           </div>
         </ul>

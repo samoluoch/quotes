@@ -14,6 +14,11 @@ export class QuotesComponent implements OnInit {
     new Quotes (1, 'George Washington', 'Guard against the impostures of pretended patriotism.', 'Sam', new Date(2018, 8, 11)),
     new Quotes (1, 'Albert Camus', 'Guard against the impostures of pretended patriotism.', 'Sam', new Date(2018, 8, 11)),
   ];
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index);
+    }
+  }
 
   toggleDetails(index) {
     this.quotes[index].showQuote = !this.quotes[index].showQuote;
