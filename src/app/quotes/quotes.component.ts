@@ -25,8 +25,9 @@ export class QuotesComponent implements OnInit {
   }
 
   addNewQuote(quote) {
-    const quotelength = this.quotes.length;
-    quote.id = quotelength + 1;
+    const quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.dateCreated = new Date (quote.dateCreated);
     this.quotes.push(quote);
   }
 
