@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row" id="form-group">
     <h1>Post a new Quote</h1>
-    <form> <!--(ngSubmit)='submitQuote()' #quoteForm='ngForm'-->
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
 
        <label for="author">Author</label>
